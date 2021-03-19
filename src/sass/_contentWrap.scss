@@ -34,8 +34,15 @@
 				transition: 0.4s;
 
 				&:hover {
-					background-color: #313131;
-					color: #AAA;
+					// background-color: #313131;
+					// color: #AAA;
+					// color: #1f1f1f;
+					background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+					background-color:#dfdfdf;
+				}
+				&:active {
+					position:relative;
+					top:1px;
 				}
 			}
 		}
@@ -74,8 +81,11 @@
 					}
 
 					&:focus, &:valid {
-						background-color: #313131;
-						color: #FFF;
+						// background-color: #313131;
+						// color: #FFF;
+					color: #1f1f1f;
+					background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+					background-color:#dfdfdf;
 					}
 				}
 			}

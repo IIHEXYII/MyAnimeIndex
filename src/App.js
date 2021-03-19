@@ -20,12 +20,15 @@ const App = () => {
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='mr-auto'>
-              <NavLink to='/' exact className='nav-link'>
+              {/* <NavLink to='/' exact className='nav-link'>
                 Home
-              </NavLink>
-              <NavLink to='/About' exact className='nav-link'>
+              </NavLink> */}
+              {/* <NavLink to='/About' exact className='nav-link'>
                 Contact
-              </NavLink>
+              </NavLink> */}
+              <a className='nav-link' href='https://myanimelist.net/profile/-HeXy-' target='_blank'>MyAnimeList</a>
+              <a className='nav-link' href='https://anichart.net/' target='_blank'>AniChart</a>
+              <a className='nav-link' href='https://www.animenewsnetwork.com/' target='_blank'>Anime News</a>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

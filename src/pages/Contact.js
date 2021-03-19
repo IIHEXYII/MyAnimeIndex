@@ -8,13 +8,13 @@ import Header from '../components/Header';
 const schema = yup.object().shape({
   name: yup
     .string('')
-    .required("Please enter your name")
-    .min(3, "The name must be at least 3 characters or longer"),
+    .min(3, "The name must be at least 3 characters or longer")
+    .required("Please enter your name"),
 
   age: yup.number().required("Please enter your age").min(10).max(20),
 
   website: yup
-    .string()
+    .string('')
     .matches(/^(?:http(s)?:)?[\w.-]+(?:[\w-]+)+[\w\-_~:/?#[@!&',;=.]+$/gm,
       "Please enter a valid URL"
     )
@@ -38,10 +38,10 @@ const Contact = () => {
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <div className="form__details">
         <input 
-          placeholder="Full Name"
+          placeholder="Name"
           className="form__input"
           type="text"
-          name="FullName"
+          name="name"
           ref={register({ required: true })}
         />
         <div className="form__error">
