@@ -4,12 +4,11 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    NavLink
+    // NavLink
   } from 'react-router-dom';
   import { Container } from 'react-bootstrap';
-
-import Home from '../src/pages/Home';
-import About from './pages/Contact';
+  import Home from '../src/pages/Home';
+  import About from './pages/Contact';
 
 
 const App = () => {
@@ -26,9 +25,9 @@ const App = () => {
               {/* <NavLink to='/About' exact className='nav-link'>
                 Contact
               </NavLink> */}
-              <a className='nav-link' href='https://myanimelist.net/profile/-HeXy-' target='_blank'>MyAnimeList</a>
-              <a className='nav-link' href='https://anichart.net/' target='_blank'>AniChart</a>
-              <a className='nav-link' href='https://www.animenewsnetwork.com/' target='_blank'>Anime News</a>
+              <a className='nav-link' href='https://myanimelist.net/profile/-HeXy-' target='_blank' rel="noreferrer">MyAnimeList</a>
+              <a className='nav-link' href='https://anichart.net/' target='_blank' rel="noreferrer">AniChart</a>
+              <a className='nav-link' href='https://www.animenewsnetwork.com/' target='_blank' rel="noreferrer">Anime News</a>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
