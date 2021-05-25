@@ -5,10 +5,14 @@ function MainContent(props) {
 	return (
 		<main>
 			<div className="main-head">
+				{/* <button>previous</button>
+				<button>next</button> */}
 				<form 
 					className="search-box"
 					onSubmit={props.HandleSearch}>
+						<label className="hidden" for="search">Search</label>
 					<input 
+						id="search"
 						type="search"
 						placeholder="Search for an anime..."
 						required

@@ -28,6 +28,8 @@ const App = () => {
               <a className='nav-link' href='https://myanimelist.net/profile/-HeXy-' target='_blank' rel="noreferrer">MyAnimeList</a>
               <a className='nav-link' href='https://anichart.net/' target='_blank' rel="noreferrer">AniChart</a>
               <a className='nav-link' href='https://www.animenewsnetwork.com/' target='_blank' rel="noreferrer">Anime News</a>
+              <a className='nav-link' href='https://www.crunchyroll.com/' target='_blank' rel="noreferrer">Crunchyroll</a>
+
             </Nav>
           </Navbar.Collapse>
         </Navbar>
