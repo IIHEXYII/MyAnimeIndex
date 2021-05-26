@@ -8,7 +8,7 @@
     padding: 45px 50px;
     &__center{
         text-align: center;
-        
+        margin: 0 auto 5px auto;
     }
     &__center-div{
         margin: 0 auto;
@@ -77,13 +77,24 @@
 
   .cc {
       margin: 20px auto;
-
-
   }
   .social-icon {
       height:2rem;
       width:2rem;
   }
+.logo {
+    color: $mainColor;
+}
+  .btn__backTop {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background: dodgerblue;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+  }
+
   @media (max-width: 600px) {
     .footer{
         &__left{
