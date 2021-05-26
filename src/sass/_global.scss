@@ -18,3 +18,16 @@ h1 {
 .hidden {
     display: none;
 }
+
+
+button {
+    border : none;
+    padding: 10px;
+    min-width: 100px;
+    margin: 0 10px 0 10px;
+    border-radius: 5px;
+    background: $mainColor;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+}
