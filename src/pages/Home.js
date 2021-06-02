@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import MainContent from '../components/MainContent';
 import Footer from '../components/Footer';
+
 function App() {
 	const [animeList, SetAnimeList] = useState([]);
 	const [topAnime, SetTopAnime] = useState([]);
@@ -29,6 +30,7 @@ function App() {
 
 		SetAnimeList(temp.results);
 	}
+
 	const FetchDefaultAnime = async (query) => {
 		const temp = await fetch(`${API}${query}${Recommended}&limit=30&page=${pageNum}`)
 			.then(res => res.json());
@@ -36,7 +38,6 @@ function App() {
 		SetAnimeList(temp.results);
 	}
 	
-
 	useEffect(() => {
 		FetchDefaultAnime();
 		GetTopAnime();
