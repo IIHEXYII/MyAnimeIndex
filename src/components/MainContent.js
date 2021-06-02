@@ -5,9 +5,9 @@ function MainContent(props) {
 	return (
 		<main>
 			<div className="main-head">
-				{/* <button>previous</button>
+				<button className="prev">previous</button>
 				<p>[ N/A ]</p>
-				<button>next</button> */}
+				<button className="next">next</button>
 				<form 
 					className="search-box"
 					onSubmit={props.HandleSearch}>
