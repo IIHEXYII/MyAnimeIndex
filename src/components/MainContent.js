@@ -6,9 +6,9 @@ function MainContent(props) {
 		<main>
 			<div className="main-head">
 
-				<button className="prev">previous</button>
-				<p>[ N/A ]</p>
-				<button className="next">next</button>
+				<button className="prev" onClick={() => props.changePageNum("prev")}>previous</button>
+				<p> {props.pageNum}</p>
+				<button className="next" onClick={() => props.changePageNum("next")}>next</button>
 
 				<form 
 					className="search-box"
@@ -23,13 +23,12 @@ function MainContent(props) {
 						onChange={e => props.SetSearch(e.target.value)}/>
 				</form>
 			</div>
-			
 			<div className="anime-list">
-				{props.animeList.map(anime => (
+				{props.animeList ?( props.animeList.map(anime => (
 					<AnimeCard
 						anime={anime}
 						key={anime.mal_id} />
-				))}
+				))) : "Loading..." }
 			</div>
 		</main>
 	)
