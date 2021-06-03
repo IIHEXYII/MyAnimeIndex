@@ -60,12 +60,22 @@
 
 			input {
 				text-align: center;
-				max-width: 60px;
+				max-width: 70px;
 				margin: 5px 10px;
 				background: #eee;
 				border: none;
 				font-weight: bold;
 				border-radius: 5px;
+			}
+			input::-webkit-outer-spin-button,
+			input::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+
+			/* Firefox */
+			input[type=number] {
+			-moz-appearance: textfield;
 			}
 
 			p {

@@ -7,14 +7,14 @@ function MainContent(props) {
 			<div className="main-head">
 				<div className="pagination">
 					<button className="prev" onClick={() => props.changePageNum({job: "prev"})}>prev</button>
-					<input type="text" onChange={(e) => props.changePageNum({job: "input", input: e.target.value})} value={props.pageNum} />
+					<input type="number" min="1" onChange={(e) => props.changePageNum({job: "input", input: e.target.value})} value={props.pageNum} />
 					<button className="next" onClick={() => props.changePageNum({job: "next"})}>next</button>
 				</div>
 				
 				<form 
 					className="search-box"
 					onSubmit={props.HandleSearch}>
-						<label className="hidden" for="search">Search</label>
+						<label className="hidden" htmlFor="search">Search</label>
 					<input 
 						id="search"
 						type="search"
@@ -33,7 +33,7 @@ function MainContent(props) {
 			</div>
 			<div className="pagination pagination-center">
 					<button className="prev" onClick={() => props.changePageNum({job: "prev"})}>prev</button>
-					<input type="text" onChange={(e) => props.changePageNum({job: "input", input: e.target.value})} value={props.pageNum} />
+					<input type="number" min="1" onChange={(e) => props.changePageNum({job: "input", input: e.target.value})} value={props.pageNum} />
 					<button className="next" onClick={() => props.changePageNum({job: "next"})}>next</button>
 			</div>
 			

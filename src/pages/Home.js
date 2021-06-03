@@ -11,11 +11,12 @@ function App() {
 	const recommended ="&order_by=members&sort=desc";
 	const API = "https://api.jikan.moe/v3/search/anime?q="
 	const [pageNum, setPageNum] = useState(1);
-    const [pageMax, setPageMax] = useState (20);
 	const searchFilters = "&order_by=title&sort=asc";
-	
-    function fetchAnime({pageNum, task}) {
+	const [canFetch, setCanFetch] = useState(true);
+
+    function fetchAnime({page, task}) {
 		let url = "";
+		let num = page ? page : pageNum;
 		switch (task) {
 			case "top":
 				url = "https://api.jikan.moe/v3/top/anime/1/bypopularity";
@@ -24,11 +25,12 @@ function App() {
 				url = API+search+recommended+searchFilters+`&limit=30`;
 				break;
 			default:
-				url = API+search+recommended+`&limit=30&page=${pageNum}`
+				url = API+search+recommended+`&limit=30&page=${num}`
 				break;
 		}
-		console.log(search);
-        fetch(url)
+
+        if (canFetch) {
+			fetch(url)
             .then(response => response.json())
             .then(data => {
 
@@ -38,6 +40,7 @@ function App() {
 					setAnimeList(data.results);
 				}
 			});
+		}
     }
 
     const HandleSearch = e => {
@@ -50,32 +53,40 @@ function App() {
 		let num;
         switch (job) {
             case "next": 
-				num = pageNum+1;
+				num = parseInt(pageNum)+1;
                 setPageNum(num);
-                fetchAnime({pageNum : num});
+                fetchAnime({page : num});
                 break;
             case "prev":
-				num = Math.max(1, pageNum-1);
+				num = Math.max(1, parseInt(pageNum)-1);
                 setPageNum(num);
-                fetchAnime({pageNum : num});
+                fetchAnime({page : num});
                 break;                
 			case "input":
-			 	setPageNum(input);
-				fetchAnime({pageNum : input});
+				num = input;
+			 	setPageNum(num);
+				fetchAnime({page : num});
 				break;
         }
+		setTimeout(() => {
+			setCanFetch(true);
+		  }, 1000);
+		  setCanFetch(false);
     }
 
 	useEffect(() => {
-		fetchAnime({pageNum: pageNum});
+		fetchAnime({page: pageNum});
 		fetchAnime({task : "top"});
 
 
 	}, []);
-	
+
+	useEffect(() => {
+		canFetch && fetchAnime({});
+	},[canFetch])
+
 	return (
 		<div className="App">
-			{console.log(animeList)}
 			<Header />
 			<div className="content-wrap">
 				<Sidebar
