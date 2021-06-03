@@ -8,9 +8,10 @@ function App() {
 	const [animeList, SetAnimeList] = useState([]);
 	const [topAnime, SetTopAnime] = useState([]);
 	const [search, SetSearch] = useState("");
-	const Recommended ="&order_by=members&sort=desc";
+	const recommended ="&order_by=members&sort=desc";
 	const API = "https://api.jikan.moe/v3/search/anime?q="
 	const pageNum = 1;
+
 	const GetTopAnime = async () => {
 		const temp = await fetch(`https://api.jikan.moe/v3/top/anime/1/bypopularity`)
 			.then(res => res.json());
@@ -23,16 +24,16 @@ function App() {
 
 		FetchAnime(search);
 	}
-
+	// search function
 	const FetchAnime = async (query) => {
 		const temp = await fetch(`${API}${query}&order_by=title&sort=asc&limit=30`)
 			.then(res => res.json());
 
 		SetAnimeList(temp.results);
 	}
-
+	// default list of anime 
 	const FetchDefaultAnime = async (query) => {
-		const temp = await fetch(`${API}${query}${Recommended}&limit=30&page=${pageNum}`)
+		const temp = await fetch(`${API}${query}${recommended}&limit=30&page=${pageNum}`)
 			.then(res => res.json());
 
 		SetAnimeList(temp.results);

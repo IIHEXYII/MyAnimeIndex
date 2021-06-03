@@ -8,7 +8,7 @@ import {
   } from 'react-router-dom';
   import { Container } from 'react-bootstrap';
   import Home from '../src/pages/Home';
-  import About from './pages/Contact';
+  // import About from './pages/Contact';
 
 
 const App = () => {
@@ -34,7 +34,7 @@ const App = () => {
         <Container>
         <Switch>
             <Route path='/' exact component={Home} />
-            <Route path='/About' component={About} />
+            {/* <Route path='/About' component={About} /> */}
         </Switch>  
         </Container>
       </Router>

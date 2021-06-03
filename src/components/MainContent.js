@@ -5,9 +5,11 @@ function MainContent(props) {
 	return (
 		<main>
 			<div className="main-head">
+
 				<button className="prev">previous</button>
 				<p>[ N/A ]</p>
 				<button className="next">next</button>
+
 				<form 
 					className="search-box"
 					onSubmit={props.HandleSearch}>
@@ -21,6 +23,7 @@ function MainContent(props) {
 						onChange={e => props.SetSearch(e.target.value)}/>
 				</form>
 			</div>
+			
 			<div className="anime-list">
 				{props.animeList.map(anime => (
 					<AnimeCard

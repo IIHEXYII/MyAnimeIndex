@@ -23,10 +23,10 @@ function topFunction() {
                     <p className="footer__links">
                         <button onClick={topFunction} className="btn__backTop"title="Go to top">Back to top</button>
                     </p>
+
                     <div className="footer__center-div">
                     <p className="footer__center">Thanks for checking out my little otaku project</p>
                     <p className="footer__center">Powered by: <a className="" href="https://app.netlify.com/">Netlify</a></p>
-
                     <p className="footer__center cc">MyAnimeIndex &copy; 2021</p>
                     </div>
                     
