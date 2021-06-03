@@ -5,11 +5,12 @@ function MainContent(props) {
 	return (
 		<main>
 			<div className="main-head">
-
-				<button className="prev" onClick={() => props.changePageNum("prev")}>previous</button>
-				<p> {props.pageNum}</p>
-				<button className="next" onClick={() => props.changePageNum("next")}>next</button>
-
+				<div className="pagination">
+					<button className="prev" onClick={() => props.changePageNum({job: "prev"})}>prev</button>
+					<input type="text" onChange={(e) => props.changePageNum({job: "input", input: e.target.value})} value={props.pageNum} />
+					<button className="next" onClick={() => props.changePageNum({job: "next"})}>next</button>
+				</div>
+				
 				<form 
 					className="search-box"
 					onSubmit={props.HandleSearch}>
@@ -30,6 +31,12 @@ function MainContent(props) {
 						key={anime.mal_id} />
 				))) : "Loading..." }
 			</div>
+			<div className="pagination pagination-center">
+					<button className="prev" onClick={() => props.changePageNum({job: "prev"})}>prev</button>
+					<input type="text" onChange={(e) => props.changePageNum({job: "input", input: e.target.value})} value={props.pageNum} />
+					<button className="next" onClick={() => props.changePageNum({job: "next"})}>next</button>
+			</div>
+			
 		</main>
 	)
 }

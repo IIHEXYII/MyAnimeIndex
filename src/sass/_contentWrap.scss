@@ -52,6 +52,28 @@
 		flex: 1 1 0%;
 		padding: 0px 16px;
 
+		.pagination {
+			display: flex;
+			flex-direction: row;
+			margin: auto 0;
+		
+			input {
+				text-align: center;
+				max-width: 60px;
+				margin: 5px 10px;
+				background: #eee;
+				border: none;
+				font-weight: bold;
+				border-radius: 5px;
+			}
+
+			p {
+				font-size: 3rem;
+			}
+		}
+		.pagination-center {
+			justify-content: center;
+		}
 		.main-head {
 			display: flex;
 			justify-content: flex-end;
@@ -234,6 +256,7 @@
 		}
 	}
   }
+
   
   @media screen and (max-width: 500px) {
 	.content-wrap {

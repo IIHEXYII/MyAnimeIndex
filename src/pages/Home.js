@@ -36,7 +36,6 @@ function App() {
 					SetTopAnime(data.top.slice(0, 10))
 				}else {
 					setAnimeList(data.results);
-					setPageMax(data.last_page);
 				}
 			});
     }
@@ -47,19 +46,23 @@ function App() {
 		fetchAnime({task : "search" });
 	}
   
-    function changePageNum(job) {
+    function changePageNum({job, input}) {
 		let num;
         switch (job) {
             case "next": 
-				num = (Math.min(pageMax, pageNum+1));
+				num = pageNum+1;
                 setPageNum(num);
-                fetchAnime(num);
+                fetchAnime({pageNum : num});
                 break;
             case "prev":
 				num = Math.max(1, pageNum-1);
                 setPageNum(num);
-                fetchAnime(num);
+                fetchAnime({pageNum : num});
                 break;                
+			case "input":
+			 	setPageNum(input);
+				fetchAnime({pageNum : input});
+				break;
         }
     }
 
