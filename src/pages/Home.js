@@ -67,8 +67,6 @@ function App() {
 			 	setPageNum(num);
 				fetchAnime({page : num});
 				break;
-			default: false;
-
         }
 		setTimeout(() => {
 			setCanFetch(true);
