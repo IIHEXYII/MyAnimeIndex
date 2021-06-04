@@ -31,12 +31,11 @@ function MainContent(props) {
 						key={anime.mal_id} />
 				))) : "Loading..." }
 			</div>
-			<div className="pagination pagination-center">
+			<div className="pagination pagination-left">
 					<button className="prev" onClick={() => props.changePageNum({job: "prev"})}>prev</button>
 					<input type="number" min="1" onChange={(e) => props.changePageNum({job: "input", input: e.target.value})} value={props.pageNum} />
 					<button className="next" onClick={() => props.changePageNum({job: "next"})}>next</button>
 			</div>
-			
 		</main>
 	)
 }
