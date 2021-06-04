@@ -67,8 +67,8 @@ function App() {
 			 	setPageNum(num);
 				fetchAnime({page : num});
 				break;
-				default:
-						return false;
+			default:
+					return false;
         }
 		setTimeout(() => {
 			setCanFetch(true);
@@ -79,7 +79,9 @@ function App() {
 	useEffect(() => {
 		fetchAnime({page: pageNum});
 		fetchAnime({task : "top"});
-
+//Fixed Warning => React Hook useEffect has a missing dependency:
+// 'fetchAnime'. Either include it or remove the dependency array
+// by using the line below, over the array.
 	// eslint-disable-next-line
 	}, []);
 
