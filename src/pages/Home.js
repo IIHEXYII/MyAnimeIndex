@@ -82,8 +82,8 @@ function App() {
 	}, []);
 
 	useEffect(() => {
-		// eslint-disable-next-line
 		canFetch && fetchAnime({});
+		// eslint-disable-next-line
 	},[canFetch])
 
 	return (
