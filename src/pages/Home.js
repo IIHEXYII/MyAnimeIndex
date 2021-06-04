@@ -27,7 +27,6 @@ function App() {
 			default:
 				url = API+search+recommended+`&limit=30&page=${num}`
 				break;
-				default: false;
 		}
 
         if (canFetch) {
@@ -68,6 +67,8 @@ function App() {
 			 	setPageNum(num);
 				fetchAnime({page : num});
 				break;
+			default: false;
+
         }
 		setTimeout(() => {
 			setCanFetch(true);
