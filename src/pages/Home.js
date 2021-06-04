@@ -27,6 +27,7 @@ function App() {
 			default:
 				url = API+search+recommended+`&limit=30&page=${num}`
 				break;
+				default: false;
 		}
 
         if (canFetch) {
@@ -78,10 +79,11 @@ function App() {
 		fetchAnime({page: pageNum});
 		fetchAnime({task : "top"});
 
-
+	// eslint-disable-next-line
 	}, []);
 
 	useEffect(() => {
+		// eslint-disable-next-line
 		canFetch && fetchAnime({});
 	},[canFetch])
 
