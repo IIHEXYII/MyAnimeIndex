@@ -29,7 +29,7 @@ function MainContent(props) {
 					<AnimeCard
 						anime={anime}
 						key={anime.mal_id} />
-				))) : <p>No Results Found.</p> }
+				))) : <p>No Results Found</p> }
 			</div>
 			<div className="pagination pagination-left">
 					<button className="prev" onClick={() => props.changePageNum({job: "prev"})}>prev</button>
