@@ -14,6 +14,8 @@ function App() {
 	const searchFilters = "&order_by=title&sort=asc";
 	const [canFetch, setCanFetch] = useState(true);
 
+
+
     function fetchAnime({page, task}) {
 		let url = "";
 		let num = page ? page : pageNum;
@@ -81,7 +83,7 @@ function App() {
 		fetchAnime({task : "top"});
 //Fixed Warning => React Hook useEffect has a missing dependency:
 // 'fetchAnime'. Either include it or remove the dependency array
-// by using the line below, over the array.
+// by using the line below, over the array will stop this error.
 	// eslint-disable-next-line
 	}, []);
 
