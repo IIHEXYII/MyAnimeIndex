@@ -24,10 +24,10 @@ function App() {
 				url = "https://api.jikan.moe/v3/top/anime/1/bypopularity";
 				break;
 			case "search":
-				url = API+search+recommended+searchFilters+`&limit=30`;
+				url = API+search+recommended+searchFilters+`&limit=35`;
 				break;
 			default:
-				url = API+search+recommended+`&limit=30&page=${num}`
+				url = API+search+recommended+`&limit=35&page=${num}`
 				break;
 		}
 
@@ -96,8 +96,8 @@ function App() {
 		<div className="App">
 			<Header />
 			<div className="content-wrap">
-				<Sidebar
-					topAnime={topAnime} />
+				{/* <Sidebar
+					topAnime={topAnime} /> */}
 				<MainContent
 					HandleSearch={HandleSearch}
 					search={search}

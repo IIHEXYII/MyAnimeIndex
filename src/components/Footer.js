@@ -26,8 +26,9 @@ function topFunction() {
 
                     <div className="footer__center-div">
                     <p className="footer__center">Thanks for checking out my little otaku project</p>
-                    <p className="footer__center">Powered by: <a className="" href="https://app.netlify.com/">Netlify</a></p>
-                    <p className="footer__center cc">MyAnimeIndex &copy; 2021</p>
+                    <p className="footer__center">Hosted by: <a className="" href="https://app.netlify.com/">Netlify</a></p>
+                    <p className="footer__center">API by: <a className="" href="https://jikan.docs.apiary.io/#">Jikan</a></p>
+                    <p className="footer__center cc">Hexyweb.com &copy; 2021</p>
                     </div>
                     
                 </div>

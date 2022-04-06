@@ -5,11 +5,13 @@ function MainContent(props) {
 	return (
 		<main>
 			<div className="main-head">
+				{/* <div className="next-container"> */}
 				<div className="pagination">
 					<button className="prev" onClick={() => props.changePageNum({job: "prev"})}>prev</button>
 					<input type="number" min="1" onChange={(e) => props.changePageNum({job: "input", input: e.target.value})} value={props.pageNum} />
 					<button className="next" onClick={() => props.changePageNum({job: "next"})}>next</button>
 				</div>
+				{/* </div> */}
 				
 				<form 
 					className="search-box"

@@ -23,7 +23,7 @@ const App = () => {
           <Navbar.Brand href='/'>MY<strong>ANIME</strong>INDEX</Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
-            <Nav className='mr-auto'>
+            <Nav className=''>
               {/* <NavLink to='/' exact className='nav-a'>
                 Home
               </NavLink> */}
@@ -31,14 +31,20 @@ const App = () => {
                 Contact
               </NavLink> */}
 
-              <a className='nav-a' href='https://myanimelist.net/profile/-HeXy-' target='_blank' rel="noreferrer">MyAnimeList</a>
               <a className='nav-a' href='https://anichart.net/' target='_blank' rel="noreferrer">AniChart</a>
-              <a className='nav-a' href='https://www.animenewsnetwork.com/' target='_blank' rel="noreferrer">Anime News</a>
+              
               <NavDropdown className='nav-dropdown' title="Watch Anime" id="basic-nav-dropdown">
+                <NavDropdown.Item target='_blank' rel="noreferrer" href="https://www.crunchyroll.com/">Crunchyroll</NavDropdown.Item>
                 <NavDropdown.Item target='_blank' rel="noreferrer" href="https://www1.gogoanime.ai/">Gogoanime</NavDropdown.Item>
                 <NavDropdown.Item target='_blank' rel="noreferrer" href="https://www1.animeultima.to/">Animeultima</NavDropdown.Item>
+                <NavDropdown.Item target='_blank' rel="noreferrer" href="https://www2.kickassanime.ro/">Kickassanime</NavDropdown.Item>
                 <NavDropdown.Item target='_blank' rel="noreferrer" href="https://9anime.to/">9anime</NavDropdown.Item>
               </NavDropdown>
+              <NavDropdown className='nav-dropdown' title="News" id="basic-nav-dropdown">
+                <NavDropdown.Item target='_blank' rel="noreferrer" href="https://www.animenewsnetwork.com/">AnimeNewsNetwork</NavDropdown.Item>
+                <NavDropdown.Item target='_blank' rel="noreferrer" href="https://otakumode.com/news">OtakuMode</NavDropdown.Item>
+              </NavDropdown>
+              <a className='nav-a' href='https://myanimelist.net/profile/-HeXy-' target='_blank' rel="noreferrer">MyAnimeList</a>
             </Nav>
             
           </Navbar.Collapse>
