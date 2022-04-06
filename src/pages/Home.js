@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import Header from '../components/Header';
-import Sidebar from '../components/Sidebar';
+// import Sidebar from '../components/Sidebar';
 import MainContent from '../components/MainContent';
 import Footer from '../components/Footer';
 
 function App() {
 	const [animeList, setAnimeList] = useState([]);
-	const [topAnime, SetTopAnime] = useState([]);
+	// const [topAnime, SetTopAnime] = useState([]);
 	const [search, SetSearch] = useState("");
 	const recommended ="&order_by=members&sort=desc";
 	const API = "https://api.jikan.moe/v3/search/anime?q="
@@ -35,12 +35,11 @@ function App() {
 			fetch(url)
             .then(response => response.json())
             .then(data => {
-
-				if (task === "top"){
-					SetTopAnime(data.top.slice(0, 10))
-				}else {
+				// if (task === "top"){
+				// 	SetTopAnime(data.top.slice(0, 10))
+				// }else {
 					setAnimeList(data.results);
-				}
+				// }
 			});
 		}
     }
